@@ -78,18 +78,43 @@
 
 
 
-const nombres = ["Lucia", "Ana", "Maria", "Luis", "Jose", "Pablo"];
-console.log(nombres) ;
-const nombresSeleccionados = nombres.filter(nombre => nombre.length < 5)
-    .map(nombre => nombre.toUpperCase())
-    .reduce((acumulador, nombreActual, index) => {
-        if (index === 0) {
-            return nombreActual;
-        } else {
-            return acumulador + ", " + nombreActual;
-        }
-    }, "");
-    const fraseFinal = " los Nombres seleccionados son:  .";
-    console.log(fraseFinal);
-        console.log(nombresSeleccionados) ;
-        
+//const nombres = ["Lucia", "Ana", "Maria", "Luis", "Jose", "Pablo"];
+//console.log(nombres) ;
+//const nombresSeleccionados = nombres.filter(nombre => nombre.length < 5)
+    //.map(nombre => nombre.toUpperCase())
+    //.reduce((acumulador, nombreActual, index) => {
+        //if (index === 0) {
+         //   return nombreActual;
+        //} else {
+        //    return acumulador + ", " + nombreActual;
+      //  }
+    //}, "");
+    //const fraseFinal = " los Nombres seleccionados son:  .";
+    //console.log(fraseFinal);
+        //console.log(nombresSeleccionados) ;
+
+
+
+const products = [
+  { name: 'Laptop', price: 1000 },
+  { name: 'Mouse', price: 25 },
+  { name: 'Teclado', price: 50 },
+  { name: 'Monitor', price: 200 },
+  { name: 'Audífonos', price: 75 }
+];
+console.log('Lista de Productos Originales');
+let contador = 1;
+products.forEach(product => {
+  console.log(`${contador}. ${product.name} - $${product.price}`);
+  contador++;
+});
+const productosSeleccionados = products.filter(product => product.price >= 50);
+productosSeleccionados.forEach(product => {
+  console.log(`- ${product.name} - $${product.price}`);
+});
+console.log('Productos con precio mayor o igual a $50:');
+
+const totalVentas = productosSeleccionados.reduce((sum, product) => {
+  return sum + product.price;
+}, 0);
+console.log(`Total de ventas: $${totalVentas}`);
