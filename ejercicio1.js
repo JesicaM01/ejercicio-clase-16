@@ -55,9 +55,23 @@
 //console.log(nombreConL) ;
 
 
-const palabras = ["sol", "luna", "estrella"];
+//const palabras = ["sol", "luna", "estrella"];
+//console.log(palabras) ;
+//const longitudTotal = palabras.map( palabra => { return palabra.length; })
+//console.log(longitud);
+//longitudTotal.forEach(longitud =>  {
+  //  console.log(longitud);
+//});
+
+
+
+const palabras = ["Me", "gusta", "aprender" , "JavaScript"];
 console.log(palabras) ;
-const longitudTotal = palabras.map( palabra => { return palabra.length; })
-longitudTotal.forEach(longitud => {
-    console.log(longitud);
-});
+const frase = palabras.reduce((acumulador, palabra) => {
+    if (acumulador === "") {
+        return palabra;
+    } else {
+        return acumulador + " " + palabra;
+    }
+}, "");
+console.log(frase);
