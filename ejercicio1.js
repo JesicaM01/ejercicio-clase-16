@@ -49,7 +49,15 @@
 //console.log(nombresConA);
 
 
-let nombres = ["Carlos" ,"Daniel" ,"Laura" ,"Ana"];
-console.log(nombres) ;
-let nombreConL = nombres.find(nombre => nombre.includes("L"));
-console.log(nombreConL) ;
+//let nombres = ["Carlos" ,"Daniel" ,"Laura" ,"Ana"];
+//console.log(nombres) ;
+//let nombreConL = nombres.find(nombre => nombre.includes("L"));
+//console.log(nombreConL) ;
+
+
+const palabras = ["sol", "luna", "estrella"];
+console.log(palabras) ;
+const longitudTotal = palabras.map( palabra => { return palabra.length; })
+longitudTotal.forEach(longitud => {
+    console.log(longitud);
+});
