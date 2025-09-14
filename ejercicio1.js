@@ -95,26 +95,54 @@
 
 
 
-const products = [
-  { name: 'Laptop', price: 1000 },
-  { name: 'Mouse', price: 25 },
-  { name: 'Teclado', price: 50 },
-  { name: 'Monitor', price: 200 },
-  { name: 'Audífonos', price: 75 }
-];
-console.log('Lista de Productos Originales');
-let contador = 1;
-products.forEach(product => {
-  console.log(`${contador}. ${product.name} - $${product.price}`);
-  contador++;
-});
-const productosSeleccionados = products.filter(product => product.price >= 50);
-productosSeleccionados.forEach(product => {
-  console.log(`- ${product.name} - $${product.price}`);
-});
-console.log('Productos con precio mayor o igual a $50:');
+//const products = [
+ // { name: 'Laptop', price: 1000 },
+  //{ name: 'Mouse', price: 25 },
+  //{ name: 'Teclado', price: 50 },
+ // { name: 'Monitor', price: 200 },
+//  { name: 'Audífonos', price: 75 }
+//];
+//console.log('Lista de Productos Originales');
+//let contador = 1;
+//products.forEach(product => {
+  //console.log(`${contador}. ${product.name} - $${product.price}`);
+ // contador++;
+//});
+//const productosSeleccionados = products.filter(product => product.price >= 50);
+//productosSeleccionados.forEach(product => {
+  //console.log(`- ${product.name} - $${product.price}`);
+//});
+//console.log('Productos con precio mayor o igual a $50:');
 
-const totalVentas = productosSeleccionados.reduce((sum, product) => {
-  return sum + product.price;
-}, 0);
-console.log(`Total de ventas: $${totalVentas}`);
+//const totalVentas = productosSeleccionados.reduce((sum, product) => {
+  //return sum + product.price;
+//}, 0);
+//console.log(`Total de ventas: $${totalVentas}`);
+
+
+
+const movies = [
+  { title: 'El Señor de los Anillos', duration: 200 },
+  { title: 'Inception', duration: 148 },
+  { title: 'Matrix', duration: 136 },
+  { title: 'Toy Story', duration: 81 },
+  { title: 'Coco', duration: 105 }
+];
+console.log('Lista de películas original:', movies);
+let contador = 1;
+
+const shortestMovie = movies.reduce((min, movie) => 
+  (movie.duration < min.duration ? movie : min), movies[0]);
+
+console.log('1) La película más corta es:', shortestMovie);
+
+const remainingMovies = movies.filter(movie => movie.title !== shortestMovie.title);
+
+const longTitleMovies = remainingMovies.filter(movie => movie.title.length > 10);
+
+console.log('2) Películas con más de 10 caracteres:', longTitleMovies);
+
+const longTitlesInLowercase = longTitleMovies.map(movie => movie.title.toLowerCase());
+
+console.log('4) El título de la película más corta es:', shortestMovie.title);
+console.log('5) La lista de títulos largos en minúscula es:', longTitlesInLowercase);
