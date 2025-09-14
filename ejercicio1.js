@@ -16,14 +16,21 @@
 //console.log(numero);
   
 
-const numeros = [1,2,3,4,];
-console.log(numeros) ; 
+//const numeros = [1,2,3,4,];
+//console.log(numeros) ; 
+//const operacion = numeros.reduce((acumulador, num) => {
+        //if (acumulador === "") {
+          //  return num.toString();
+        //} else {
+      //      return acumulador + " + " + num ;
+    //    }
+  //  }, "")
+//console.log(operacion) ;
 
-const operacion = numeros.reduce((acumulador, num) => {
-        if (acumulador === "") {
-            return num.toString();
-        } else {
-            return acumulador + " + " + num ;
-        }
-    }, "")
-console.log(operacion) ;
+
+
+const frutas = ["manzana", "banana", "naranja", "fresa"];
+console.log(frutas) ;
+frutas.forEach(function(fruta) {
+    console.log(fruta);
+});
