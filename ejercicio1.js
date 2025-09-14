@@ -43,7 +43,13 @@
 //console.log(palabrasTransformadas) ;
 
 
-const nombres = ["Ana", "Luis", "Andrea", "Maria"];
-console.log(nombres);
-const nombresConA = nombres.filter(nombre => nombre.includes("A"));
-console.log(nombresConA);
+//const nombres = ["Ana", "Luis", "Andrea", "Maria"];
+//console.log(nombres);
+//const nombresConA = nombres.filter(nombre => nombre.includes("A"));
+//console.log(nombresConA);
+
+
+let nombres = ["Carlos" ,"Daniel" ,"Laura" ,"Ana"];
+console.log(nombres) ;
+let nombreConL = nombres.find(nombre => nombre.includes("L"));
+console.log(nombreConL) ;
