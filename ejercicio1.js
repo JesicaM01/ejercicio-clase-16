@@ -65,13 +65,31 @@
 
 
 
-const palabras = ["Me", "gusta", "aprender" , "JavaScript"];
-console.log(palabras) ;
-const frase = palabras.reduce((acumulador, palabra) => {
-    if (acumulador === "") {
-        return palabra;
-    } else {
-        return acumulador + " " + palabra;
-    }
-}, "");
-console.log(frase);
+//const palabras = ["Me", "gusta", "aprender" , "JavaScript"];
+//console.log(palabras) ;
+//const frase = palabras.reduce((acumulador, palabra) => {
+    //if (acumulador === "") {
+     //   return palabra;
+    //} else {
+    //    return acumulador + " " + palabra;
+  //  }
+//}, "");
+//console.log(frase);
+
+
+
+const nombres = ["Lucia", "Ana", "Maria", "Luis", "Jose", "Pablo"];
+console.log(nombres) ;
+const nombresSeleccionados = nombres.filter(nombre => nombre.length < 5)
+    .map(nombre => nombre.toUpperCase())
+    .reduce((acumulador, nombreActual, index) => {
+        if (index === 0) {
+            return nombreActual;
+        } else {
+            return acumulador + ", " + nombreActual;
+        }
+    }, "");
+    const fraseFinal = " los Nombres seleccionados son:  .";
+    console.log(fraseFinal);
+        console.log(nombresSeleccionados) ;
+        
