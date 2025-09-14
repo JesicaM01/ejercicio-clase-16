@@ -37,8 +37,13 @@
 
 
 
-const palabras = ["hola", "mundo", "javascript"];
-console.log(palabras) ;
-const palabrasTransformadas = palabras.map(palabra => { return "¡" + palabra + "!"; });
-console.log(palabrasTransformadas) ;
+//const palabras = ["hola", "mundo", "javascript"];
+//console.log(palabras) ;
+//const palabrasTransformadas = palabras.map(palabra => { return "¡" + palabra + "!"; });
+//console.log(palabrasTransformadas) ;
 
+
+const nombres = ["Ana", "Luis", "Andrea", "Maria"];
+console.log(nombres);
+const nombresConA = nombres.filter(nombre => nombre.includes("A"));
+console.log(nombresConA);
