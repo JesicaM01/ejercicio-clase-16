@@ -9,8 +9,21 @@
 //const numerosPares = numeros.filter(function(num){ return num % 2 === 0; });
 //console.log(numerosPares);
 
-const numeros = [5,8,12,20,3];
-console.log(numeros) ;
+//const numeros = [5,8,12,20,3];
+//console.log(numeros) ;
 
-const numero = numeros.find(function(num) { return num > 10; });
-console.log(numero);
+//const numero = numeros.find(function(num) { return num > 10; });
+//console.log(numero);
+  
+
+const numeros = [1,2,3,4,];
+console.log(numeros) ; 
+
+const operacion = numeros.reduce((acumulador, num) => {
+        if (acumulador === "") {
+            return num.toString();
+        } else {
+            return acumulador + " + " + num ;
+        }
+    }, "")
+console.log(operacion) ;
