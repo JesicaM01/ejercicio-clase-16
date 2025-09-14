@@ -29,8 +29,16 @@
 
 
 
-const frutas = ["manzana", "banana", "naranja", "fresa"];
-console.log(frutas) ;
-frutas.forEach(function(fruta) {
-    console.log(fruta);
-});
+//const frutas = ["manzana", "banana", "naranja", "fresa"];
+//console.log(frutas) ;
+//frutas.forEach(function(fruta) {
+  //  console.log(fruta);
+//});
+
+
+
+const palabras = ["hola", "mundo", "javascript"];
+console.log(palabras) ;
+const palabrasTransformadas = palabras.map(palabra => { return "¡" + palabra + "!"; });
+console.log(palabrasTransformadas) ;
+
